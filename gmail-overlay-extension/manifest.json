@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Gmail Phishing Detector",
+    "version": "1.0",
+    "description": "Highlights potentially dangerous emails in Gmail",
+    "permissions": ["scripting", "storage"],
+    "host_permissions": ["https://mail.google.com/*"],
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://mail.google.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
+  

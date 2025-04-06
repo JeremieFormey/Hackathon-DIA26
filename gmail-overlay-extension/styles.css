@@ -1,0 +1,241 @@
+/**
+ * Gmail Phishing Detector - Styles
+ * 
+ * This stylesheet contains all the styling for highlighting risky emails
+ * and for the tooltip and chat interface elements.
+ */
+
+/* ===== Email Highlighting ===== */
+
+/* High risk email highlight */
+.gm-phishing-risk-high {
+    position: relative;
+    border: 2px solid #ff4d4d !important;
+    border-radius: 4px;
+    background-color: rgba(255, 77, 77, 0.05) !important;
+  }
+  
+  /* Warning button */
+  .gm-phishing-warning-btn {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gm-phishing-warning-btn:hover {
+    background-color: #ff3333;
+  }
+  
+  /* ===== Tooltip Styles ===== */
+  
+  .gm-phishing-tooltip {
+    background-color: white;
+    width: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .tooltip-title {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .tooltip-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+  }
+  
+  .tooltip-body {
+    padding: 12px;
+  }
+  
+  .tooltip-body p {
+    margin: 6px 0;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .more-info-btn {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .more-info-btn:hover {
+    background-color: #3367d6;
+  }
+
+  .unflag-btn {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 8px;
+    background-color: #6c757d; /* neutral gray */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .unflag-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  
+  /* ===== Chat Interface ===== */
+  
+  .gm-phishing-chat-container {
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #4285f4;
+    color: white;
+  }
+  
+  .chat-title {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+  }
+  
+  .chat-message {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .chat-message.user {
+    flex-direction: row-reverse;
+  }
+  
+  .chat-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0 8px;
+  }
+  
+  .chat-bubble {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .chat-message.assistant .chat-bubble {
+    background-color: #e8eaed;
+    color: #202124;
+    border-top-left-radius: 4px;
+  }
+  
+  .chat-message.user .chat-bubble {
+    background-color: #4285f4;
+    color: white;
+    border-top-right-radius: 4px;
+  }
+  
+  .chat-input-container {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 20px;
+    font-size: 13px;
+    outline: none;
+  }
+  
+  .chat-input:focus {
+    border-color: #4285f4;
+  }
+  
+  .chat-send {
+    margin-left: 8px;
+    padding: 6px 12px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .chat-send:hover {
+    background-color: #3367d6;
+  }
+  
